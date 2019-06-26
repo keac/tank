@@ -19,7 +19,7 @@ public class Tank {
     public int getSpeed() {
         return speed;
     }
-
+    boolean life=true;
     public void setSpeed(int speed) {
         this.speed = speed;
     }
@@ -35,9 +35,17 @@ public class Tank {
     int x, y;
     int speed = 3;
    int direction = 0;
-
+   int life_i=2;
+   int life_y=life_i;
+    public  void attack(){
+        if(life_i<=1)
+            this.life=false;
+        else
+            life_i--;
+    }
     Tank(int x, int y) {
         this.x = x;
         this.y = y;
     }
+
 }
